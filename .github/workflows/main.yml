@@ -1,0 +1,19 @@
+name: My First Workflow
+
+on: [push]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository Code
+      uses: actions/checkout@v4
+
+    - name: Run Initial Message
+      run: echo “Add initial GitHub Actions workflow”
+
+    - name: Run Modified Message and Commands
+      run: |
+        echo “Modify GitHub Actions message and add commands”
+        echo “The CI/CD pipeline executed successfully!”
